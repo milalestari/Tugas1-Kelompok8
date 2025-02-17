@@ -13,13 +13,11 @@ Terdapat file `solution.js` yang berisi beberapa fungsi matematika yang belum le
 5. **pangkat(a, b)** → Menghitung hasil pangkat dari dua angka
 6. **faktorial(n)** → Menghitung faktorial dari angka `n`
 7. **isPrima(n)** → Mengecek apakah angka `n` adalah bilangan prima
-8. **fibonacci(n)** → Mengembalikan bilangan Fibonacci ke-`n`
-9. **modulus(a, b)** → Mengembalikan sisa hasil bagi `a` dengan `b`
-10. **absolut(n)** → Mengembalikan nilai absolut dari `n`
-11. **akarKuadrat(n)** → Menghitung akar kuadrat dari `n`
-12. **maksimum(a, b)** → Mengembalikan angka terbesar dari `a` dan `b`
-13. **minimum(a, b)** → Mengembalikan angka terkecil dari `a` dan `b`
-14. **bulatkan(n)** → Membulatkan angka `n` ke bilangan bulat terdekat
+8. **modulus(a, b)** → Mengembalikan sisa hasil bagi `a` dengan `b`
+9. **absolut(n)** → Mengembalikan nilai absolut dari `n`
+10. **maksimum(a, b)** → Mengembalikan angka terbesar dari `a` dan `b`
+11. **minimum(a, b)** → Mengembalikan angka terkecil dari `a` dan `b`
+12. **bulatkan(n)** → Membulatkan angka `n` ke bilangan bulat terdekat
 
 ---
 
