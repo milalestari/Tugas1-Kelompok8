@@ -1,5 +1,10 @@
 # Tugas Praktikum: Implementasi Fungsi Matematika dalam Node.js
 
+## **Anggota Kelompok**
+1. Mila Lestari (2208107010002)
+2. Pryta Rosela (2208107010046)
+3. Widya Nurul Sukma (2208107010054)
+
 ## **Deskripsi Tugas**
 Praktikan diharapkan membaca README ini dengan saksama sebelum mengerjakan tugas.
 
