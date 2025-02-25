@@ -5,6 +5,7 @@
  * @returns {number}
  */
 function tambah(a, b) {
+    return a + b;
 }
 
 /**
@@ -14,6 +15,7 @@ function tambah(a, b) {
  * @returns {number}
  */
 function kurang(a, b) {
+    return a - b;
 }
 
 /**
@@ -23,6 +25,7 @@ function kurang(a, b) {
  * @returns {number}
  */
 function kali(a, b) {
+    return a * b;
 }
 
 /**
@@ -32,7 +35,10 @@ function kali(a, b) {
  * @returns {number | string}
  */
 function bagi(a, b) {
- 
+    if (b === 0) {
+    return "Pembagian oleh nol tidak diperbolehkan";
+    }
+    return a / b;
 }
 
 /**
@@ -42,6 +48,7 @@ function bagi(a, b) {
  * @returns {number}
  */
 function pangkat(a, b) {
+    return Math.pow(a, b);
 }
 
 /**
@@ -50,6 +57,9 @@ function pangkat(a, b) {
  * @returns {number}
  */
 function faktorial(n) {
+    if (n < 0) return "Error: Faktorial tidak didefinisikan untuk bilangan negatif";
+    if (n === 0) return 1;
+    return n * faktorial(n - 1);
 }
 
 /**
@@ -58,18 +68,21 @@ function faktorial(n) {
  * @returns {boolean}
  */
 function isPrima(n) {
+    if (n < 2) return false;
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
 }
 
 /**
  * Mengembalikan hasil dari a modulus b.
- * modulus adalah sisa pembagian a dengan b.
- * contoh 10 mod 3 = 1, karena 10 dibagi 3 adalah 3 sisa 1.
- * 10 / 3 = 3 sisa 1. dan 1 adalah jawabannya
  * @param {number} a 
  * @param {number} b 
  * @returns {number}
  */
 function modulus(a, b) {
+    return a % b;
 }
 
 /**
@@ -78,8 +91,8 @@ function modulus(a, b) {
  * @returns {number}
  */
 function absolut(a) {
+    return Math.abs(a);
 }
-
 
 /**
  * Mengembalikan nilai terbesar dari dua angka.
@@ -88,6 +101,7 @@ function absolut(a) {
  * @returns {number}
  */
 function maksimum(a, b) {
+    return Math.max(a, b);
 }
 
 /**
@@ -97,6 +111,7 @@ function maksimum(a, b) {
  * @returns {number}
  */
 function minimum(a, b) {
+    return Math.min(a, b);
 }
 
 /**
@@ -105,6 +120,21 @@ function minimum(a, b) {
  * @returns {number}
  */
 function bulatkan(a) {
+    return Math.round(a);
 }
 
 // Export hasil akhir
+module.exports = {
+    tambah,
+    kurang,
+    kali,
+    bagi,
+    pangkat,
+    faktorial,
+    isPrima,
+    modulus,
+    absolut,
+    maksimum,
+    minimum,
+    bulatkan
+};
