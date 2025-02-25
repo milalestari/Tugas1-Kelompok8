@@ -68,3 +68,64 @@ function kalkulator() {
           rl.close();
         });
       } else {
+        rl.question('Masukkan angka pertama: ', (num1) => {
+          rl.question('Masukkan angka kedua: ', (num2) => {
+            const angka1 = parseFloat(num1);
+            const angka2 = parseFloat(num2);
+            let hasil;
+            switch (pilihan) {
+              case 1:
+                hasil = tambah(angka1, angka2);
+                break;
+              case 2:
+                hasil = kurang(angka1, angka2);
+                break;
+              case 3:
+                hasil = kali(angka1, angka2);
+                break;
+              case 4:
+                hasil = bagi(angka1, angka2);
+                break;
+              case 5:
+                hasil = pangkat(angka1, angka2);
+                break;
+              case 9:
+                hasil = modulus(angka1, angka2);
+                break;
+              case 10:
+                hasil = maksimum(angka1, angka2);
+                break;
+              case 11:
+                hasil = minimum(angka1, angka2);
+                break;
+            }
+            tampilkanHasil(angka1, angka2, hasil);
+            rl.close();
+          });
+        });
+      }
+    } else {
+      console.log('Pilihan tidak valid! Masukkan angka antara 1-12.');
+      rl.close();
+    }
+  });
+}
+
+// Fungsi untuk menampilkan hasil dalam bentuk tabel
+function tampilkanHasil(angka1, angka2, hasil) {
+  const table = new Table({
+    head: ['Angka 1', 'Angka 2', 'Hasil'],
+    colWidths: [10, 10, 15],
+  });
+
+  if (angka2 === null) {
+    table.push([angka1, '-', hasil]);
+  } else {
+    table.push([angka1, angka2, hasil]);
+  }
+
+  console.log('\n=== HASIL PERHITUNGAN ===');
+  console.log(table.toString());
+}
+
+kalkulator();
